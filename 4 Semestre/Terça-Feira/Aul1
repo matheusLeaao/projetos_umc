@@ -1,0 +1,23 @@
+Estrutura e complexidade de algoritmos 06/08
+
+Cap. 1: ALGORITMOS DE ORDENAÇÃO
+-Devemos estudar um conjunto de algoritmos de ordenação de dados para podermos entender o conceito de complexidade e podermos comparar a complexidade desses algoritmos (comparar eficiência desses algoritmos).
+-Dado um conjunto de ELEMENTOS DE DADOS, O ALGORITMO DE ORDENAÇÃO deverá ordená-los de acordo com os valores de uma CHAVE DE ORDENAÇÃO.
+-ELEMENTO DE DADOS são agrupamentos de dados (registros, linhas de uma tabela) que deverão ser mantidos agrupados durante o processamento do algoritmo de ordenação.
+-CHAVE DE ORDENAÇÃO: É um campo de registros ou uma coluna da tabela que o analista escolhe para que os elementos sejam ordenados pelos valores desse campo ou dessa coluna. 
+EXEMPLO: seja LISTA DE CHAMADA de uma disciplina.
+a) Cada ELEMENTO = rgm + nome
+b) Se a CHAVE DE ORDENAÇÃO por RGM a lista será ordenada pelos valores dos RGM's.
+c) Se foe ordenada alfabeticamente pelos NOMES, o NOME será a CHAVE DE ORDENAÇÃO.
+
+Obs:
+a) Os ELEMENTOS serão representados por seus respectivos valores da CHAVE DE ORDENAÇÃO.
+b) A ordem CRESCENTE será adotada nas descrições dos algoritmos.
+
+1- ORDENAÇÃO por SELEÇÃO
+- Seja uma lista com elementos desordenados. A ordenação por SELEÇÃO consiste em SELECIONAR o elemento de MENOR VALOR da chave de ordenação, retirá-lo da lista e inseri-lo em uma fila. A operação se repetirá enquanto houver elementos na lista.
+EXEMPLO: Ordenar por SELEÇÃO um conjunto de elementos com os seguintes valores da chave de ordenação: 7, 5, 13, 3, 15, 10
+
+2 - ORDENAÇÃO POR INSERÇÃO
+- Consiste em retirar cada elemento de uma estrutura e INSERIR em uma LISTA na sua posição relativamente ordenada, comparando para isso, o valor da sua chave de ordenação com os valores dos elementos que já estiverem na lista ordenada. 
+- EXEMPLO: seja um conjunto de elementos com os seguintes valores da chave de ordenação. 
