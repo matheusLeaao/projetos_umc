@@ -16,4 +16,12 @@ Polimorfismo -> caracterizado quando dois ou mais classes distintas tem métodos
 Requisitos: 	- herança
 		- sobrescrita de métodos
 
-Composição -> nos permite a criação de objetos a partir da reunião de outros objetos 
+Composição -> nos permite a criação de objetos a partir da reunião de outros objetos.
+
+======Análise OO x Projeto OO======
+
+Análise OO -> enfatiza uma investigação do problema e dos requisitos (O quê: Domínio do _Negócio_)
+
+Projeto OO -> enfatiza uma solução conceitual que satifaça os requisitos e não uma implementação (Como: Domínio da _Solução_)
+
+ 
