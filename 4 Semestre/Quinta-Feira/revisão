@@ -1,0 +1,19 @@
+======Revisão======
+
+Paradigma OO é uma forma de abordar um problema. Ele orienta a organização de ideias para o entendimento de uma realidade e o estabelecimento da melhor maneira de agir sobre ela.
+
+Abstrair é o processo de retirar do domínio do problema detahles relevantes e representá-los na linguagem da solução.
+
+Objetos: instâncias de uma classe específica. 
+Classes: molde a partir do qual são criados objetos distintos.Uma classe é a abstração das características e comportamentos de um grupo de objetos do mundo real.
+
+Encapsulamento -> tem como principal função esconder a estrutura interna (implementação) de um objeto. Além disso, o encapsulamento permite a criação de classes coesas e desacopladas.
+
+Herança -> refere-se ao compartilhamento de características entre classes com base em um relacionamento herárquico.
+
+Polimorfismo -> caracterizado quando dois ou mais classes distintas tem métodos de mesmo nome, possibilitando o uso da mesma mensagem para invocar comportamentos de objetos diferentes.
+
+Requisitos: 	- herança
+		- sobrescrita de métodos
+
+Composição -> nos permite a criação de objetos a partir da reunião de outros objetos 
