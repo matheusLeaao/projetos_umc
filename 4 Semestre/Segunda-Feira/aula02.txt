@@ -1,0 +1,26 @@
+======Segurança da Informação======
+
+	É o conjunto de orientação, normas, procedimentos, políticas e demais ações
+que tem como objetivo proteger recurso, informações, possibilitando que negócios
+da organização seja realizado e sua missão seja alcançada.
+	A Segurança da Informação existe para minimizar os riscos do negócio em
+relação à dependência do uso dos recursos de informação para o funcionamento
+da organização. Sem a informação ou com uma incorreta, o negócio pode ter perdas
+que comprometam o seu funcionamento e retorno de investimentos dos acionistas.
+	
+	Pesquisa: Tipos de RAID
+		  Como configurar um webserver?
+
+almir@umc.br
+
+	Pesquisa:
+		- Protocolos TCP/UDP
+		- Portas TCP/UDP
+		- RAID
+		- Segurança WebServer
+		- Serviços de Rede
+		- VPN
+		- GPO
+		- Hospedagem de Página
+		- Domínio
+		- Tipos de Backup
