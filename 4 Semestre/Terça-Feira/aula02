@@ -1,0 +1,131 @@
+=====Aula 02======
+
+=====3) Ordenação por Troca (bubble sort)=====
+
+- O algoritmo de ordenação por troca, também conhecido por algorítmo
+de bolha (bubble sort) consiste em comparar o valor da chave de
+ordenação do elemento da primeira posição com o da segunda posição.
+        Se eles não estiverem na ordem eles deverão ser trocados de posição.
+As comparações continuam entre os elementos da segunda com o da terceira
+posição.
+        Se estiverem fora de ordem eles serão trocados. As operações seguem
+até a última posição (encerrando "uma etapa").
+
+-Se acontecer uma ou mais trocas em uma etapa, as comparações deverão
+ser reiniciadas a partir das primeiras posições.
+        Se em uma etapa não ocorrer nenhuma troca, então a ordenação
+terminoa porque os elementos jáestarão ordenadps ("critério de parada" do
+algoritmo).
+
+obs:
+        a) Em cada etapa, o elemento de _maior valor_ da chave de ordenação
+estará na _útima posição_ e não mais precisará ser comparado pois estará
+na sua posição final ordenada.
+
+        b) Notações: a___b -> comparação de "a" com "b"
+                     ___
+                     |X| -> "x" está na sua posição final ordenada.
+
+Exemplo: Ordenar por TROCA um conjunto de elementos com os seguintes
+valores da chave de ordenação -> 15, 13, 5, 7, 24, 10, 12, 11.
+
+==============Etapa 1=============
+|1) 15___13, 5, 7, 24, 10, 12, 11|
+|2) 13, 15___5, 7, 24, 10, 12, 11|
+|3) 13, 5, 15___7, 24, 10, 12, 11|
+|4) 13, 5, 7, 15___24, 10, 12, 11|
+|5) 13, 5, 7, 15, 24___10, 12, 11|
+|6) 13, 5, 7, 15, 10, 24___12, 11|
+|7) 13, 5, 7, 15, 10, 12, 24___11|
+|8) 13, 5, 7, 15, 10, 12, 11,  24|
+==================================
+
+-Nova sequência: 13, 5, 7, 15, 10, 12, 11, 24 (houve troca)
+
+============Etapa 2===========
+|13__5, 7, 15, 10, 12, 11, 24|
+|5, 13__7, 15, 10, 12, 11, 24|
+|5, 7, 13__15, 10, 12, 11, 24|
+|5, 7, 13, 15__10, 12, 11, 24|
+|5, 7, 13, 10, 15__12, 11, 24|
+|5, 7, 13, 10, 12, 15__11, 24|
+|5, 7, 13, 10, 12, 11, 15__24|
+==============================
+
+-Nova sequência: 5, 7, 13, 10, 12, 11, 15, 24 (houve troca).
+
+=========Etapa 3==============
+|5__7, 13, 10, 12, 11, 15, 24|
+|5, 7__13, 10, 12, 11, 15, 24|
+|5, 7, 13__10, 12, 11, 15, 24|
+|5, 7, 10, 13__12, 11, 15, 24|
+|5, 7, 10, 12, 13__11, 15, 24|
+|5, 7, 10, 12, 11, 13__15, 24|
+==============================
+
+-Nova sequência: 5, 7, 10, 12, 11, 13, 15, 24 (houve troca).
+
+=============Etapa 4==========
+|5__7, 10, 12, 11, 13, 15, 24|
+|5, 7__10, 12, 11, 13, 15, 24|
+|5, 7, 10__12, 11, 13, 15, 24|
+|5, 7, 10, 12__11, 13, 15, 24|
+|5, 7, 10, 11, 12, 13, 15, 24|
+==============================
+
+-Nova sequência: 5, 7, 10, 11, 12, 13, 15, 24 (houve troca).
+
+===========Etapa 5============
+|5__7, 10, 11, 12, 13, 15, 24|
+|5, 7__10, 11, 12, 13, 15, 24|
+|5, 7, 10__11, 12, 13, 15, 24|
+|5, 7, 10, 11__12, 13, 15, 24|
+|5, 7, 10, 11, 12__13, 15, 24|
+|5, 7, 10, 11, 12, 13__15, 24|
+|5, 7, 10, 11, 12, 13, 15__24|
+|5, 7, 10, 11, 12, 13, 15, 24|
+==============================
+
+-Sequência: 5, 7, 10, 11, 12, 13, 15, 24 (NÃO houve troca).
+
+
+=======4) Ordenação por "QUICK SORT"=======
+
+-Para aplicar este algoritmo os elementos deverão estar em uma estrutura
+de acesso direto, tal como tabela, vetor (e não em uma lista encadeada).
+-O "quick sort" consiste na escolha de um elemento, normalmente um que se
+encontra na parte central da estrutura, e que será denominado de elemento
+PIVÔ. Compara-se todos os demais elementos com o pivô e realizam-se 
+movimentações de elementos de maneira que:
+
+	a) Os elementos de valores da chave de ordenação MENORES do que o
+pivô ocupem posições à ESQUERDA do PIVÔ e
+	b) Os elementos valores MAIORES ocupem posições à DIREITA do PIVÔ.
+
+- Com esta etapa, o PIVÔ estará em sua posição final e ordenado. Além disso,
+os elementos estarão PARTICIONADOS em dois segmentos, um deles com elementos
+de valores MENORES do que o do PIVÔ e outro com MAIORES.
+
+Obs: 
+	a) Para minimizar as movimentações, as comparações com o pivô deverão
+encontrar 2 elementos que precisam ser trocados de posição e realizar a troca
+de posições entre eles (eventualmente, o próprio PIVÔ poderá ser trocado com
+outro elemento)
+	b) Utilizam-se duas variáveis auxiliares "i" e "j" para controlar as
+comparações e trocas de maneira disciplinada e eficiente.
+
+- A partição deverã ser aplicada recursivamente em cada segmento resultante
+das partições até que todos os elementos estejam ordenados.
+
+
+(foto)
+
+
+
+
+
+
+
+
+
+
