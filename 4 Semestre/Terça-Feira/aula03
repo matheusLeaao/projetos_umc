@@ -1,0 +1,28 @@
+======5) Ordenação por Distribuição======
+
+Considerando-se que os elementos desordenados 
+estão em uma lista, o algoritmo consiste em:
+
+a)Distribuir os elementos em SUBLISTAS de 
+acordo com um dos digitos dos valores da chave
+de ordenação. Inicia-se com o digito menos
+significativo, ou seja, o digito mais à 
+direita.
+
+b)Concatena-se as sublistas formando uma nova
+lista e retorna-se ao item "a", ou seja,
+distribui-se os elementos em sublistas enquanto
+houver digitos a serem utilizados.
+
+c)QUando o último digito da extrema esquerda for
+utilizado realiza-se a última concatenação e a
+lista estará ordenada.
+
+EXEMPLO: Ordenar por distribuição um conjunto de
+elementos com os seguintes valores da chave de 
+ordenação: 304, 256, 027, 009, 042, 778, 813 e
+273.
+
+(foto)
+
+
