@@ -1,0 +1,48 @@
+======Introdução ao Diag. de Classe======
+
+Modelo 		Fornece uma perspectiva
+de caso }	do sistema a partir de
+de uso 		um ponto de vista externa
+
+Modelo		Representa o aspecto
+de	}	estrutural estático de
+Classes	 	um sistema O.O.
+
+======Estágios do Modelo de Classes======
+
+*Análise - representa as classes que se 
+tornam evidentes na medida em que focamos
+a atenção sobre "o quê" o sist. deve fazer.
+
+*Projeto - é um detalhamento das classes de
+análise, foco no "como" o sist. vai funcionar.
+
+*Imprementação - código fonte
+
+======Diagrama de Classe======
+
+Seu principal enfoque está em permitir a 
+visualização das classes que comporão o sistema
+com seus respectivos atributos e métodos, bem
+como demonstrar como as classes deste diagrama
+se relacionam.
+
+*Visibilidade por métodos e atributos
+	+ Pode ser utilizado por qualquer objeto.
+	# Somente objetoS da classe e de suas
+subclasses terão acesso.
+	- Somente objetos da classe terão acesso.
+	~ Somente objetos que fazem parte do 
+pacote terão acesso.
+(foto 1 no card)
+
+======Navegabilidade======
+
+Indica a direção da relação entre as classes.
+
+(foto 2 no card)
+
+======Herança======
+(foto 3 no card)
+
+
