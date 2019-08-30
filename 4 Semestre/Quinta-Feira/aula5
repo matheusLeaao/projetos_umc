@@ -1,0 +1,94 @@
+======Dependência entre classes======
+
+Sempre que ocorrer uma mudança na classe
+da qual outra classe depende, esta deverá
+também sofrer uma mudança.
+
+Quanto menor for o nível de dependência, 
+mais flexíveis e independetes serão as 
+classes.
+
+(foto)
+
+======Relacionamento Todo-Parte======
+
+Uma relação todo-parte entre 2 objetos
+indica que um dos objetos está contido
+no outro.
+
+Características de todo relacionamento
+Todo-Parte: 
+
+	- São assimétricos, ou seja, se um 
+objeto A é parte do objeto B, o objeto B
+não pode ser parte de A;
+	- Propagam comportamento, ou seja, 
+um comportamento que se aplica ao todo,
+automaticamente se aplica às suas partes;
+	- As partes, normalmente, são criadas
+e destruídas pelo todo.
+
+A UML define 2 tipos de relacionamentos 
+Todo-Parte:
+
+	Agregação:  < >---
+	Composição: <x>---
+
+======Agregação======
+
+É uma associação com semântica de "contém".
+Serve como uma relação Todo-Parte fraca. O objetivo
+todo pode potencialmente existir sem seus objetos 
+parte. O objeto parte pode ser compartilhado por
+mais de um objeto todo. Tem como função principal
+identificar a obrigatoriedade de uma complementação
+das informações de um objeto todo por seus objetos
+parte, quando este for consultado.
+
+======Composição======
+
+É uma associação com semântica de "é composto de".
+
+Serve como uma relação Todo-Parte forte.
+
+O objeto todo não pode existir som os seus componentes.
+
+Cada objeto parte pode estar associado somente a um 
+objeto todo. Um objeto parte não pode existir sem seu
+objeto todo.
+
+(foto)
+
+======Associação Ternárias======
+
+(foto)
+
+======Associação Refkexiva======
+
+Associa objetos de uma mesma classe.
+
+(foto)
+
+======Classe Abstrata e Concreta======
+
+A classe abstrara NÃO PERMITE a geração de instâncias
+a partir dela.
+
+(foto)
+
+======Realização======
+
+É um tipo de relacionamento especial que mistura 
+características dos relacionamentos de generalização
+e dependências, sendo usada para identificar classes
+responsáveis por executar funções para outros classes.
+
+======Interface======
+
+Uma interface se  refere a um mecanismo que determina
+uma série de requisitos que uma classe deve conter,
+estabelecendo um tipo de "contrato". Quando uma classe
+segue este contrato, dizendo que ela implementa uma
+interface.
+
+(foto)
