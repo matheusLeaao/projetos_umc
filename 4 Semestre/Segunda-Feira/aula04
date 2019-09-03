@@ -1,0 +1,33 @@
+======FATORES QUE A SEGURANÇA DEPENDE======
+
+* Estado da Informação
+	- Transmissão
+	- Armazenamento
+	- Processamento
+
+* Propriedade da Segurança da Informação
+	- Confidencialidade
+	- Integridade
+	- Disponibilidade
+
+* Medidas de Segurança
+	- Tecnologias
+	- Políticas e Procedimentos
+	- Conscienização
+
+======PROPRIEDADES DA SEGURANÇA DA INFORMAÇÃO======
+
+* Confidencialidade
+	É a necessidade de garantir que as informações
+sejam divulgadas somente para aqueles que possuem 
+autorização para vê-las.
+
+* Integridade
+	É a necessidade de garantir que a informações
+que não tenham sido alteradas acidentalmente ou 
+deliberadamente, e que elas estejam e completas.
+
+* Disponibilidade
+	É a necessidade de garantir que os propósitos
+de um sistema possam ser atingidos e que ele esteja 
+acessível àqueles que dele precisam.
