@@ -1,0 +1,28 @@
+======2.5 - ANÁLISE DO "QUICK-SORT"======
+
+* a) Quanto a complexidade
+	- O Quicksort é o algoritmo de 
+oredenação de mais baixa complexidade, ou seja, 
+mais eficiente entre os algoritmos estudados no
+capítulo 1.
+
+NC -> O(nlogn2)
+NM -> Não se tem uma expressão simples.
+
+	- Sua baixa complexidade ocorre porque o
+algoritmo é baseado na partição. (O pivô acaba
+particionando os elementos em dois segmentos).
+
+* b) É  um algoritmo eficiente mesmo para um 
+grande número de elementos a serem ordenados.
+
+* c) Não é aplicável quando os elementos estiverem
+em uma lista encadeada (é necessário que estejam em
+uma estrutura de acesso direto).
+
+* d) Não é fácil de implementar devido a sua 
+pecursividade
+
+FALSA SENSAÇÃO DE LIBERDADE******* GADO D++++++++++++++++++++++++
+
+OUVIU  O BEEEERRRAAAANTEEEEEEE E CCCOOOOORRRREEEEUUUUUUU
