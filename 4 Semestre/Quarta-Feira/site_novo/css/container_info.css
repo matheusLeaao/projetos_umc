@@ -4,52 +4,158 @@
     margin: 0 auto;
 }
 
-.padrao
+.padrao_header
 {
     position: fixed;
+    top:0;
+    width:100%;
 }
 
-.container_menu
+.padrao_footer
+{    
+    position:relative;
+    bottom:0;
+    width:100%;   
+}
+
+.container_header
 {
-    background:#77DD77;
+    background:#009338;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px 1020px 5px 5px ;
+}
+
+.container_footer
+{
+   
+    background:#009338;
     font-size: 20px;
-    font-family: Impact;
-    padding: 5px 1020px 5px 5px ;
-    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px 1020px 5px 5px ;
 }
 
-.titulo a {
-    color: white;
-    text-decoration-line: none;
-}
 
-.titulo a:hover
-{
+.titulo_header a {
     color: black;
+    text-decoration-line: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#menu ul li
+.titulo_header a:hover
+{
+    color: white;
+}
+
+.titulo_footer a {
+    color: black;
+    text-decoration-line: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.titulo_footer a:hover
+{
+    color: white;
+}
+
+#menu_header ul li
 {
     
     display: inline;
 
 }
 
-#menu ul{
+#menu_header ul{
     text-align: center;
     position: absolute;
     top: 30px;
     right: 400px;
 }
 
-#menu ul li a
+#menu_header ul li a
 {
-    color: white;
+    color: black;
     margin: 1px;
     padding: 5px;
     text-decoration-line: none;
 }
-#menu ul li a:hover
+#menu_header ul li a:hover
+{
+    color: white;
+}
+
+#menu_footer ul{
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    right: 800px;
+}
+
+#menu_footer ul li a
 {
     color: black;
+    margin: 1px;
+    padding: 5px;
+    text-decoration-line: none;
+}
+
+#menu_footer ul li a:hover
+{
+    color: white;
+}
+
+#menu_corp_footer ul li a:hover
+{
+    color: white;
+}
+
+#menu_corp_footer ul{
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    right: 500px;
+}
+
+#menu_corp_footer ul li a
+{
+    color: black;
+    margin: 1px;
+    padding: 5px;
+    text-decoration-line: none;
+}
+#menu_corp_footer ul li a:hover
+{
+    color: white;
+}
+
+.container_aventura_main
+{
+    padding: 50px 0px 0px 0px;
+    top: 80px;
+    background-color: rgb(217, 255, 0);
+}
+
+.container_drama_main
+{
+    background:hsl(210, 79%, 45% );
+    color: white;
+}
+
+.container_terror_main
+{
+    color: white;
+    background: black;
+}
+
+.titulo_main a {
+    color: white;
+    text-decoration-line: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.div_divider
+{ 
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background: url("/home/matheusleao/arquivos_importantes/umc/projetos_umc/4 Semestre/Quarta-Feira/site_novo/imagens/divider.png");
 }
