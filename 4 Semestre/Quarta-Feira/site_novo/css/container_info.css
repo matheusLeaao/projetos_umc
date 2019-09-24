@@ -132,18 +132,21 @@
     padding: 50px 0px 0px 0px;
     top: 80px;
     background-color: rgb(217, 255, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .container_drama_main
 {
     background:hsl(210, 79%, 45% );
     color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .container_terror_main
 {
     color: white;
     background: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .titulo_main a {
