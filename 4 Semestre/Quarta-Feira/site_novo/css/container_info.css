@@ -44,6 +44,7 @@
 .titulo_header a:hover
 {
     color: white;
+    transition: 0.8s;
 }
 
 .titulo_footer a {
@@ -55,6 +56,7 @@
 .titulo_footer a:hover
 {
     color: white;
+    transition: 0.8s;
 }
 
 #menu_header ul li
@@ -81,6 +83,7 @@
 #menu_header ul li a:hover
 {
     color: white;
+    transition: 0.8s;
 }
 
 #menu_footer ul{
@@ -101,11 +104,13 @@
 #menu_footer ul li a:hover
 {
     color: white;
+    transition: 0.8s;
 }
 
 #menu_corp_footer ul li a:hover
 {
     color: white;
+    transition: 0.8s;
 }
 
 #menu_corp_footer ul{
@@ -125,6 +130,7 @@
 #menu_corp_footer ul li a:hover
 {
     color: white;
+    transition: 0.8s;
 }
 
 .container_aventura_main
@@ -133,6 +139,8 @@
     top: 80px;
     background-color: rgb(217, 255, 0);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
 }
 
 .container_drama_main
@@ -140,6 +148,7 @@
     background:hsl(210, 79%, 45% );
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 .container_terror_main
@@ -147,6 +156,15 @@
     color: white;
     background: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.container_animacao_main
+{
+    color: white;
+    background: hsl(0, 79%, 45% );
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 .titulo_main a {
@@ -162,3 +180,22 @@
     z-index: 1;
     background: url("/home/matheusleao/arquivos_importantes/umc/projetos_umc/4 Semestre/Quarta-Feira/site_novo/imagens/divider.png");
 }
+
+.transition
+{
+    transition: width 2s;
+}
+
+scroll-container {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 5em;
+}
+
