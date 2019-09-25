@@ -44,7 +44,8 @@
 .titulo_header a:hover
 {
     color: white;
-    transition: 0.8s;
+    font-size: 30px;
+    transition: 0.3s;
 }
 
 .titulo_footer a {
@@ -56,7 +57,7 @@
 .titulo_footer a:hover
 {
     color: white;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 #menu_header ul li
@@ -83,7 +84,7 @@
 #menu_header ul li a:hover
 {
     color: white;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 #menu_footer ul{
@@ -104,13 +105,13 @@
 #menu_footer ul li a:hover
 {
     color: white;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 #menu_corp_footer ul li a:hover
 {
     color: white;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 #menu_corp_footer ul{
@@ -130,13 +131,11 @@
 #menu_corp_footer ul li a:hover
 {
     color: white;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 .container_aventura_main
 {
-    padding: 50px 0px 0px 0px;
-    top: 80px;
     background-color: rgb(217, 255, 0);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
