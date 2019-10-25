@@ -1,0 +1,62 @@
+--Matheus Leão 11181100029 (entrega dia 25/10)
+
+create table genero     (
+        id numeric(5) not null,
+        nome  varchar(100),
+         constraint genero_pkey primary key (id)
+        )       
+
+create table filme(
+        id   numeric(5) not null,
+        nome varchar(100),
+        duracao  varchar(100),
+        sinopse  varchar(2000),
+        genero numeric(5),
+        data   date,
+        constraint pk_genero primary key (id),
+        constraint fk_genero_filme foreign key (genero) references genero (id)
+        )
+
+insert into genero values (1,'drama'); 
+insert into genero values (2,'comedia');
+insert into genero values (3,'terror');
+insert into genero values (4,'romance');
+insert into genero values (5,'suspense');
+
+insert into filme values (1,'It A coisa','90 min','Filme do paiaço doido',3,'2017/09/20');
+insert into filme values (2,'Interstellar','120 min','PAI NÃO VAI PRO ESPAÇO, MANÉ',1,'2014/08/15');
+insert into filme values (3,'Gente Grande','100 min','Adam Sandler só faz filme bom e só minha opinião importa',2,'2005/08/15');
+insert into filme values (4,'A mão que balança o berço','90 min','A mulher não consegue ter filho então vai cuidar dos outros',5,'2005/06/12');
+
+CREATE FUNCTION numGenero (nom_genero varchar(100)) RETURNS numeric(5)
+RETURN (select id from genero where nome = nom_genero);
+
+CREATE FUNCTION addGenero (id numeric(5),nom_genero varchar(100))
+	RETURNS bool BEGIN insert into genero (id,nome) VALUES (id, nom_genero);
+   	RETURN (True);
+END;
+
+select addGenero(6,'acao');
+
+create sequence pkGenero = 0;
+
+CREATE FUNCTION addGenero (nom_genero varchar(100)) RETURNS bool
+  BEGIN
+    insert into genero (id,nome) VALUES (pkGenero.nextval, nom_genero);
+    RETURN (True);
+  END;
+
+create or replace function dropGenero(idGenero int) returns bool
+  begin
+      delete from genero WHERE id = idGenero;
+      return (True);
+  end;
+
+create or replace function dropGenero(nom_genero varchar(100)) returns bool
+  begin
+      delete from genero WHERE nome = nom_genero;
+      return (True);
+  end;
+
+
+select dropGenero('drama');
