@@ -1,0 +1,120 @@
+--Matheus Leão da Costa Pereira RGM 11181100029 
+/* 1) Cite pelo menos 3 motivos de se utilizar "Views" em um banco de dados?
+
+Resposta
+
+Com  as viwes podemos ter reuso por vários usuários, conseguimos ocultar colunas selecinadas de uma tabela (Segurança) e temos um código simplificado no quesito de limpar o código aumentando produtividade e alta facilidade na manutenção */
+
+/* 2) Você é um desenvolvedor de uma grande empresa e foi informado que deverá
+realizar as seguintes alterações de acordo com o modelo apresentado abaixo:
+(Figura no pdf)
+
+a) Desenvolva o script SQL de criação da tabela DEPTO. Inclua pelo menos 5 registros
+(utilize sequence e insert com query quando necessário). */
+
+create table depto(
+cd_depto int,
+ds_depto varchar(30),
+constraint pk_depto primary key (cd_depto)
+);
+
+create sequence cd_depto;
+insert into depto values 
+(nextval('cd_depto'),'Financeiro');
+insert into depto values 
+(nextval('cd_depto'),'Diretoria');
+insert into depto values 
+(nextval('cd_depto'),'Matricula');
+insert into depto values 
+(nextval('cd_depto'),'Secretaria');
+insert into depto values 
+(nextval('cd_depto'),'Lanchonete');
+
+/* b) Desenvolva o script SQL de criação da tabela PSSOA. Inclua pelo menos 5 registros
+(utilize sequence e insert com query quando necessário). */
+
+create table pssoa(
+cd_pssoa int,
+cd_depto int references depto,
+ds_pssoa varchar(50),
+constraint pk_pssoa primary key (cd_pssoa)
+);
+
+create sequence cd_pssoa;
+insert into pssoa values 
+(nextval('cd_pssoa'),(select cd_depto from depto where ds_depto = 'Financeiro'),'Well');
+insert into pssoa values 
+(nextval('cd_pssoa'),(select cd_depto from depto where ds_depto = 'Diretoria'),'Mauricio');
+insert into pssoa values 
+(nextval('cd_pssoa'),(select cd_depto from depto where ds_depto = 'Matricula'),'Marcelo');
+insert into pssoa values 
+(nextval('cd_pssoa'),(select cd_depto from depto where ds_depto = 'Secretaria'),'Lucas');
+insert into pssoa values 
+(nextval('cd_pssoa'),(select cd_depto from depto where ds_depto = 'Lanchonete'),'Matheus');
+
+/* c) O analista de projeto te pediu para adicionar uma nova coluna na tabela PSSOA
+chamada de DT_NASC (Data de Nacimento). Atualize esta informação em todos os
+registros inseridos. */
+
+alter table pssoa add dt_nasc date;
+
+update pssoa set dt_nasc = '10/12/2000' where cd_pssoa = 1;
+update pssoa set dt_nasc = '16/03/1972' where cd_pssoa = 2;
+update pssoa set dt_nasc = '18/06/1968' where cd_pssoa = 3;
+update pssoa set dt_nasc = '06/12/2002' where cd_pssoa = 4;
+update pssoa set dt_nasc = '12/10/1969' where cd_pssoa = 5;
+
+/* d) O analista de sistemas solicitou que seja criada uma view para possibilitar a geração de
+um relatório referente aos aniversariantes (nome da pessoa, data de nascimento) o
+mês de setembro. Dica: pesquise sobre a função date_part. */
+
+create view niver as select pssoa.ds_pssoa,(pssoa.dt_nasc = 
+(SELECT DATEPART(month, '2019/09/27') AS dt_nasc)) from pssoa where dpto.cd_depto = pssoa.cd_depto;
+
+/* e) O analista de sistemas solicitou que seja criada uma view para possibilitar a geração de
+um relatório mensal de pessoas lotada em um departamento (nome da pessoa, nome
+do departamento). */
+
+create view relatorio as select pssoa.ds_pssoa,depto.ds_depto from pssoa,depto where depto.cd_depto = pssoa.cd_depto;
+
+/* f) O analista de sistemas solicitou que seja criada uma view para gerar relatório de
+pessoas em ordem decrescente. */
+
+create view pessoas as select ds_pssoa from pssoa order by ds_pssoa desc;
+
+/* g) O analista de sistemas solicitou que seja criada uma view para gerar relatório de
+departamento que estão vazios (não possuem pessoas). */
+
+create view depto_vazio as select ds_depto from depto where cd_depto = null;
+
+/* h) O analista de sistemas solicitou que seja criada uma view para gerar relatório de
+departamento que não estão vazios (possuem pessoas). */
+
+create view depto_nvazio as select ds_depto from depto where cd_depto = notnull;
+
+/* 3) O analista do projeto, 1 ano depois decidiu criar o sistema de segurança e pediu
+para incluir uma nova tabela chamada USUAS (Usuários) de acordo com o modelo revisado
+apresentado abaixo (OBS: incluir pelo menos 5 registros na nova tabela): 
+
+a) O analista de sistemas solicitou que seja criada uma view para gerar relatório de
+usuários do sistema por departamento (login do usuário, nome do departamento). */
+
+create table usuas(
+cd_usuas int,
+cd_pssoa int references pssoa,
+ds_login varchar(20),
+ds_senha varchar(20),
+constraint pk_usuas primary key (cd_usuas)
+);
+
+create sequence seq_usuas;
+insert into usuas values 
+(nextval('seq_usuas'), (select cd_pssoa from pssoa where ds_pssoa = 'Well'),'login1','123Mudar');
+insert into usuas values 
+(nextval('seq_usuas'), (select cd_pssoa from pssoa where ds_pssoa = 'Mauricio'),'login2','123Mudar');
+insert into usuas values 
+(nextval('seq_usuas'), (select cd_pssoa from pssoa where ds_pssoa = 'Marcelo'),'login3','123Mudar');
+insert into usuas values (nextval('seq_usuas'), (select cd_pssoa from pssoa where ds_pssoa = 'Lucas'),'login4','123Mudar');
+insert into usuas values (nextval('seq_usuas'), (select cd_pssoa from pssoa where ds_pssoa = 'Matheus'),'login5','123Mudar');
+
+create view view1  as select usuas.ds_login,depto.ds_depto from usuas, depto;
